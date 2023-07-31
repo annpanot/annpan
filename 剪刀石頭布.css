@@ -1,0 +1,52 @@
+#top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.desc {
+    width: 380px;
+    height: 38px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.choose {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.choose img {
+    width: 85%;
+}
+
+.win {
+    text-align: center;
+}
+
+.win img {
+    margin-top: 20px;
+    height: 120px;
+}
+
+#you, #me {
+    width: 380px;
+    height: 500px;
+}
+
+#bar {
+    display: flex;
+    justify-content: space-around;
+}
+
+#bar button {
+    margin-top: 20px;
+    width: 300px;
+    height: 80px;
+    background-color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+    color:blue;
+    border-radius: 8%;
+}

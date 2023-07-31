@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0704-8課堂</title>
+    <style>
+        body {
+                margin: 0;
+                padding: 0;
+                /* height: 3000px; */
+            }
+            #nav {
+                position: fixed;
+                background-color: aqua;
+                width: calc(80% - 10px * 2);
+                /* height: 100px; */
+                left: 10%;
+                padding: 10px;
+                z-index: 9;
+            }
+            #logo {
+                background-color: blue;
+                width: 80px;
+                height: 80px;
+                /* margin-top: 10px; */
+                border-radius: 50%;
+                background-image: url(./img/IMG-9309.PNG);
+                background-size: contain;
+                background-repeat: no-repeat;
+                float: left;
+            }
+
+            #logo:hover {
+                transform: scale(1.2) rotate(45deg);
+            }
+
+            #logo:active {
+                transform: rotate(90deg);
+            }
+            #nav-btn-all {
+                /* background-color: blue; */
+                /* width: 400px; */
+                /* height: 100px; */
+                float: right;
+                padding: 10px 0;
+            }
+            .nav-btn  {
+                background-color: pink;
+                width: 100px;
+                height: 60px;
+                float: left;
+                /* 字體大小 預設16px 最小12px */
+                font-size: 24px;
+                text-align: center;
+                line-height: 60px;
+                font-weight: bold;
+                border-radius: 10px;
+                /* margin-top: 10px; */
+                margin-left: 10px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+            /* a:link尚未拜訪過，尚未按過 */
+            /* a:link {
+                background-color: yellow;
+                color: red;
+            /* } 
+            /* a: hover 當滑鼠移到物件上方，會產生的效果 */
+            a:hover {
+                background-color: bisque;
+                color: green;
+            }
+
+            a:active {
+                background-color: black;
+                color:white
+            }
+            /* a:link 拜訪過=>按過 */
+            /* a:visited {
+                background-color: red;
+                color: yellow;
+            } */
+
+            #container {
+                background-color: aqua;
+                width: 80%;
+                height: 300px;
+                margin: auto;
+            }
+            .banner {
+                width: 100%;
+                height: calc(50vh - 50px);
+                background-color: blue;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                padding-top: calc(50vh - 50px);
+                position: relative;
+            }
+
+            #banner-1-anchor, #banner-2-anchor {
+                position: absolute;
+                top: -100px;
+            }
+            #banner-1 {
+                background-image: url(./img/橘貓.jpg);
+                /* position: relative; */
+            }
+            #banner-2 {
+                background-image: url(./img/橘貓-2.jpg);
+            }
+            #banner-3 {
+                background-image: url(./img/橘貓-3.jpg);
+                /* background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                padding-top: 50vh;
+                position: relative; */
+            }
+            .mask {
+                background-color: black;
+                width: 100%;
+                height: 100%;
+                opacity: 0.5;
+                position: relative;
+                /* bottom: 0; */
+            }
+            .btn {
+                width: 150px;
+                height: 50px;
+                background-color: white;
+                font-size: 32px;
+                /* line-height: 50px; */
+                text-align: center;
+                border-radius: 5px;
+                position: absolute;
+                top: calc(50% - 25px);
+                left: calc(50% - 75px);
+                /* top: calc(75% - 25px);
+                left: calc(50% - 75px); */
+                /* transform: translate: translateX(-50%); */
+                /* transform: translate: translateY(-50%); */
+                /* 轉置: 遷移(x方向,物件寬的%,y方向,物件的高的%)
+                其中+- 代表 正負方向 螢幕x軸向右為+, y軸向上為- */
+                /* line-height: 50px; */
+                /* transform: translate(-50%, -50%); */
+            }
+            #top-3 {
+                width: 50px;
+                height: 50px;
+                background-color: yellow;
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                font-size: 24px;
+                line-height: 50px;
+                text-align: center;
+                padding: 10px;
+            }
+    </style>     
+</head>
+<body>
+    <div id="nav">
+        <div id="logo"></div>
+        <div id="nav-btn-all">
+             <!-- <div class="nav-btn">第一區</div>
+             <div class="nav-btn">第二區</div>
+             <div class="nav-btn">第三區</div> -->
+             <!-- 超連結 hyperlink
+            a:anchor 錨點
+            href: 錨點目的地=> 連結的位址
+            href: Hypertext reference -->
+            <!-- <a href=""></a> -->
+            <a href="#banner-1-anchor" class="nav-btn">第一區</a>
+            <a href="#banner-2" class="nav-btn">第二區</a>
+            <a href="#banner-3" class="nav-btn">第三區</a>
+            <!-- <a href="#banner-4" class="nav-btn">第三區</a> -->
+        </div>
+    </div>
+        <div id="container">
+        <div id="banner-1" class="banner">
+             <div class="mask">
+                <div class="btn">第一區</div>
+             </div>
+        </div>
+        <div id="banner-2" class="banner">
+            <div class="mask">
+                <div class="btn">第二區</div>
+            </div>
+        </div>
+        <div id="banner-3" class="banner">
+            <div class="mask">
+                <div class="btn">第三區</div>
+            </div>
+        </div>
+    
+    </div>
+    <!-- <a href="#"><div id="top">Top</div></a> -->
+    <!-- <a href="#"><div id="top-2">Top2</a> -->
+    <div></div><a href="#"><div id="top-3">Top</a></div>
+    <!-- href="#" 表示連到自仔這一頁，自動到點端
+        herf="" 也會有同樣效果 -->
+        <!-- 要用 <a href=""-></a> 去包住<div></div>->
+    <a href="#"><div id="top">Top</div></a>
+
+
+</body>
+</html>

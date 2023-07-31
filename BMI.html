@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <style>
+        body{
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #bmi-box {
+            width: 850px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px dashed green;
+        }
+
+        #top {
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #height,
+        #weight {
+            width: 100px;
+            border: 1px dashed green;
+        }
+
+        #result {
+            width: 300px;
+            height: 15px;
+            padding: 1px 2px;
+            border: 1px dashed green;
+            margin: auto;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px dashed green;
+            text-align: center;
+        }
+
+        .first-td{
+            width: 180px;
+        }
+
+        .others-td{
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bmi-box">
+        <h1 id="title">BMI計算機</h1>
+        <div id="paragraph">身體質量指數(Body Mass Index，簡稱BMI)是公認來估計肥胖程度的方法</div>
+        <br>
+        <div id="calculate">BMI=體重(公斤)/身高的平方(公尺)</div>
+        <br>
+
+        <div id="information">
+            <div id="top" class="top-border">
+                <div>我的身高：<input type="number" id="height" min="0">公分</div>
+                <div>我的體重：<input type="number" id="weight" min="0">公斤</div>
+                <button id="btn-calculate">計算</button>
+                <button id="btn-rewrite">重新填寫</button>
+            </div>
+            <br>
+            <div id="result"></div>
+            <br>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="3">BMI值</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="first-td"></td>
+                    <td class="others-td">男性</td>
+                    <td class="others-td">女性</td>
+                </tr>
+                <tr>
+                    <td class="first-td">體重過輕</td>
+                    <td class="others-td">
+                        <20 </td>
+                    <td class="others-td">
+                        <19 </td>
+                </tr>
+                <tr>
+                    <td class="first-td">正常範圍</td>
+                    <td class="others-td">20-25</td>
+                    <td class="others-td">19-25</td>
+                </tr>
+                <tr>
+                    <td class="first-td">體重過重</td>
+                    <td class="others-td">25-30</td>
+                    <td class="others-td">25-30</td>
+                </tr>
+                <tr>
+                    <td class="first-td">肥胖</td>
+                    <td class="others-td">30-40</td>
+                    <td class="others-td">30-40</td>
+                </tr>
+                <tr>
+                    <td class="first-td">超級肥胖</td>
+                    <td class="others-td">>40</td>
+                    <td class="others-td">>40</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+    </div>
+
+    <script>
+        var input_1 = document.querySelector('#height');
+        var input_2 = document.querySelector('#weight');
+        var result_1 = document.querySelector('#result');
+        var calculate = document.querySelector('#btn-calculate');
+        var rewrite = document.querySelector('#btn-rewrite');
+
+        console.log('#height', typeof ('#height'));
+
+        calculate.addEventListener('click', function () {
+            var result_2 = input_2.value / ((input_1.value / 100) * (input_1.value / 100));
+            
+            result_1.innerText = result_2.toFixed(2)
+        })
+
+        rewrite.addEventListener('click', function(){
+            height.value ='';
+            weight.value ='';
+            result_1.value ='';
+        })
+    </script>
+</body>
+
+</html>

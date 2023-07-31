@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+
+        <title>骰子遊戲</title>
+    </head>
+
+    <body>
+        <div class="container clearfix">
+            <div class="panel-1 active">
+                <div class="player">玩家 1</div>
+				           <img src="Trophy.png" class="winner1">
+                <div class="score" id="player1Score">0</div>
+                <div class="box">
+                    <div class="label">分數</div>
+                    <div class="totalScore" id="total1Score">0</div>
+                </div>
+            </div>
+
+            <div class="panel-2">
+                <div class="player">玩家 2</div>
+				<img src="Trophy.png" class="winner2">
+                <div class="score" id="player2Score">0</div>
+                <div class="box">
+                    <div class="label">分數</div>
+                    <div class="totalScore" id="total2Score">0</div>
+                </div>
+            </div>
+
+            <button class="newGame">重設遊戲</button>
+            <button class="roll">搖骰子</button>
+
+            <img src="dice1.png" class="dice">
+        </div>
+
+        <script src="骰子.js"></script>
+    </body>
+</html>
